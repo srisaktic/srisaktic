@@ -20,7 +20,7 @@ Overall, I enjoy building production-ready systems, working on scalable architec
 ## 🔥 My Highlight Projects
 - 🔐 Multimodal Phishing Detection  
 - 🚗 Car Price Prediction System  
-- 📊 Job Tracker System (in progress)
+
 
 ---
 
