@@ -4,7 +4,7 @@ I'm an **AI/ML Engineer and Backend Software Engineer** with 2+ years of profess
 
 I build and deploy end-to-end machine learning pipelines — from data preprocessing and feature engineering through model training, evaluation, and production deployment — using Python, XGBoost, Scikit-learn, and Hugging Face Transformers. On the backend side, I develop REST APIs and services using FastAPI, Flask, and Spring Boot, and deploy everything with Docker, AWS, and CI/CD pipelines.
 
-My academic background in Data Science introduced me to deep learning and NLP, where I worked on projects involving BERT-based models, multimodal architectures, and real-time inference APIs — with a focus on making them practical and production-ready.
+My academic background in Data Science introduced me to deep learning and NLP, where I worked on projects involving BERT, traditional ML (TF-IDF/SVM), CNN ensembles, and multimodal fusion architectures — with a focus on empirically selecting the right model per component rather than defaulting to the most complex option.
 
 I enjoy working across the full lifecycle of a project: understanding a business problem, building the model or system, and deploying and monitoring the solution that solves it.
 
@@ -12,8 +12,14 @@ I enjoy working across the full lifecycle of a project: understanding a business
 
 ## 🔥 My Highlight Projects
 
-- 🔐 **Multimodal Phishing Detection** — end-to-end system combining BERT text analysis, XGBoost/Logistic Regression URL classification, and CNN-based image models (ResNet50, EfficientNet, DenseNet), improving F1 score by ~12% through ensemble fusion.
+- 🔐 **Multimodal Phishing Detection** — end-to-end system combining TF-IDF + SVM for email/text classification, a BERT (bert-base-uncased) classifier for URL analysis, and a CNN ensemble (ResNet50 + EfficientNet-B0 + DenseNet121) for image classification, fused via soft/hard voting. Each modality's model was selected empirically — testing multiple candidates and choosing the one that scored best *and* fused most reliably with the other modalities.
   🔗 [Live Demo](https://phishguard-ai-tau-one.vercel.app/)
+
+  **Why these models:**
+  - **BERT** (text) — phishing language relies on contextual social-engineering cues that keyword/TF-IDF methods miss; pretrained contextual embeddings transfer well on a relatively small phishing dataset.
+  - **XGBoost + Logistic Regression** (URL features) — URL features are tabular, not sequential, so a tree-based model (captures non-linear feature interactions, gives feature importance) paired with a linear model (fast, structurally different error pattern) makes a stronger ensemble pair than two similar models.
+  - **ResNet50 + EfficientNet + DenseNet** (images) — three architecturally different CNN backbones (residual connections, compound scaling, dense feature reuse) reduce correlated errors in the voting ensemble more than using three variants of one architecture.
+  - **Multimodal fusion** — phishing attacks vary in vector (text, URL, or visual impersonation); combining all three catches attacks a single-modality model would miss, driving the F1 improvement.
 
 - 🚗 **Used Car Price Prediction (BMW)** — regression pipeline (Random Forest, XGBoost) achieving ~90% R², deployed with FastAPI + Streamlit, containerized with Docker, hosted on AWS EC2.
   🔗 [Live Demo](https://bmw-price-predictor-rhbypw6b6qntxdt9cszde8.streamlit.app/)
@@ -69,5 +75,5 @@ Python, Java, Machine Learning, XGBoost, FastAPI, Spring Boot, AWS, Docker, REST
 
 ## 📫 How to reach me
 
-- Email: srisakticharan.kumar@gmail.com
+- Email: sri.sakticharan.kumar@gmail.com
 - LinkedIn: https://www.linkedin.com/in/sri-sakticharan/
