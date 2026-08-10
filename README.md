@@ -69,5 +69,5 @@ Python, Java, Machine Learning, XGBoost, FastAPI, Spring Boot, AWS, Docker, REST
 
 ## 📫 How to reach me
 
-- Email: srisakticharannirmalkumar@gmail.com
+- Email: srisakticharan.kumar@gmail.com
 - LinkedIn: https://www.linkedin.com/in/sri-sakticharan/
