@@ -1,80 +1,73 @@
 # Hi 👋, I'm Sri Sakticharan
 
-I’m a Full Stack Software Engineer with 3+ years of experience building scalable backend systems 
-and modern web applications using Java (Spring Boot), React, and AWS. I’ve worked on designing microservices, 
-event-driven systems using Kafka, and deploying cloud-based solutions that handle real-world business workloads.
+I'm an **AI/ML Engineer and Backend Software Engineer** with 2+ years of professional experience, backed by an M.S. in Data Science from the New York Institute of Technology.
 
-Alongside my software engineering experience, I have a strong academic background in Data Science 
-through my Master’s program, where I worked on machine learning, deep learning, and NLP projects. 
-I’ve built and integrated AI systems such as BERT-based models, multimodal architectures, and 
-real-time inference APIs, focusing on making them practical and production-ready.
+I build and deploy end-to-end machine learning pipelines — from data preprocessing and feature engineering through model training, evaluation, and production deployment — using Python, XGBoost, Scikit-learn, and Hugging Face Transformers. On the backend side, I develop REST APIs and services using FastAPI, Flask, and Spring Boot, and deploy everything with Docker, AWS, and CI/CD pipelines.
 
-My foundation started during my internship at Citicorp, where I built full-stack applications using 
-Spring Boot and worked with REST APIs and real-time data handling. That experience helped me understand
-system design, backend development, and how enterprise applications are built and deployed.
+My academic background in Data Science introduced me to deep learning and NLP, where I worked on projects involving BERT-based models, multimodal architectures, and real-time inference APIs — with a focus on making them practical and production-ready.
 
-Overall, I enjoy building production-ready systems, working on scalable architectures, and integrating AI/ML into real-world applications to create intelligent and impactful solutions.
+I enjoy working across the full lifecycle of a project: understanding a business problem, building the model or system, and deploying and monitoring the solution that solves it.
 
 ---
 
 ## 🔥 My Highlight Projects
-- 🔐 Multimodal Phishing Detection  
-- 🚗 Car Price Prediction System  
 
+- 🔐 **Multimodal Phishing Detection** — end-to-end system combining BERT text analysis, XGBoost/Logistic Regression URL classification, and CNN-based image models (ResNet50, EfficientNet, DenseNet), improving F1 score by ~12% through ensemble fusion.
+  🔗 [Live Demo](https://phishguard-ai-tau-one.vercel.app/)
+
+- 🚗 **Used Car Price Prediction (BMW)** — regression pipeline (Random Forest, XGBoost) achieving ~90% R², deployed with FastAPI + Streamlit, containerized with Docker, hosted on AWS EC2.
+  🔗 [Live Demo](https://bmw-price-predictor-rhbypw6b6qntxdt9cszde8.streamlit.app/)
 
 ---
 
 ## 🛠️ Technical Skills
 
-**Languages:**  
-Java, Python, JavaScript (ES6+), TypeScript, SQL  
+**Languages:**
+Python, Java, SQL, R
 
-**Backend Development:**  
-Spring Boot, Spring Cloud, REST APIs, Hibernate/JPA, FastAPI, Flask  
+**Backend Development:**
+FastAPI, Flask, Spring Boot, REST APIs
 
-**Frontend Development:**  
-React.js, Next.js, Redux, HTML5, CSS3, Tailwind CSS, GraphQL  
+**AI & Machine Learning:**
+Scikit-learn, XGBoost, TensorFlow, Keras, Hugging Face Transformers, BERT, RoBERTa, NLP, CNNs
 
-**AI & Machine Learning:**  
-Scikit-learn, XGBoost, TensorFlow/Keras, Hugging Face, BERT, CNNs  
+**GenAI & MLOps:**
+LLMs, RAG, MLflow, SHAP, Federated Learning (exploratory), Streamlit
 
-**GenAI & ML Engineering:**  
-LLMs, RAG, MLOps, Federated Learning, Streamlit  
+**Cloud & Deployment:**
+AWS (EC2, Lambda, S3), Docker, OpenShift
 
-**Cloud & Architecture:**  
-AWS (Lambda, API Gateway, EC2, S3), Microservices, Serverless, Distributed Systems  
+**Databases & Caching:**
+PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch
 
-**Messaging & Streaming:**  
-Kafka, EventBridge, RabbitMQ  
-
-**Databases & Caching:**  
-PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch  
-
-**DevOps & Tools:**  
-Docker, Kubernetes, Jenkins, GitHub Actions, CI/CD, SonarQube, JUnit, Mockito, Git, Jira, Postman  
+**DevOps & Tools:**
+Jenkins, GitHub Actions, CI/CD, SonarQube, JUnit, Mockito, Git, JIRA, Postman
 
 ---
 
 ## 🧰 Tech Stack (Quick View)
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=java,python,spring,react,aws,docker,kafka,postgres,mongodb" />
+  <img src="https://skillicons.dev/icons?i=java,python,fastapi,flask,spring,docker,aws,postgres,mongodb,redis" />
 </p>
 
 ---
 
 ## 🌱 Currently working on
-- Backend systems (Spring Boot, Microservices)
-- AI + Full Stack integration
-- System design & scalability
+
+- Production ML pipelines (FastAPI, Docker, AWS)
+- Backend services (Spring Boot, FastAPI)
+- Model deployment, monitoring, and explainability (MLflow, SHAP)
 
 ---
 
 ## 💬 Ask me about
-Java, Spring Boot, React, AWS, Kafka, Microservices, AI/ML
+
+Python, Java, Machine Learning, XGBoost, FastAPI, Spring Boot, AWS, Docker, REST APIs
 
 ---
 
 ## 📫 How to reach me
-- Email: srisakticharannirmalkumar@gmail.com  
+
+- Email: srisakticharannirmalkumar@gmail.com
 - LinkedIn: https://www.linkedin.com/in/sri-sakticharan/
