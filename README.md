@@ -9,7 +9,6 @@ I enjoy developing **end-to-end ML and Generative AI applications** — from dat
 
 I'm particularly interested in building AI systems that go beyond model experimentation and become practical, reliable applications.
 
-📍 **Chennai, India | Open to opportunities in Bengaluru**
 
 ---
 
