@@ -72,18 +72,18 @@ The system combines complementary model predictions within each modality and int
 
 **System Architecture:**
 
-- **📧 Email Modality — 97.5% reported score**
+- **📧 Email Modality**
   - Fine-tuned **BERT (80%)** + **TF-IDF and SVM (20%)**.
   - Concatenated email subject and body, followed by text cleaning and lemmatization.
   - Applied Platt scaling for calibrated prediction probabilities.
   - The application separately reports **98.76% accuracy** for a six-model fusion evaluation.
 
-- **🔗 URL Modality — 95.1% reported score**
+- **🔗 URL Modality**
   - Fine-tuned **BERT (`bert-base-uncased`) (80%)** on raw URL strings.
   - Combined with **Logistic Regression (20%)** using 11 structural URL features.
   - Three epochs of BERT fine-tuning on more than 7,500 samples.
 
-- **🖼️ Image Modality — 89.7% reported score**
+- **🖼️ Image Modality**
   - **F1-weighted CNN ensemble** combining:
     - ResNet50 (~34%)
     - EfficientNet-B0 (~34%)
