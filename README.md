@@ -64,35 +64,63 @@ The system combines **Voyage embeddings, Qdrant vector search, cross-encoder rer
 
 **Deep Learning | NLP | Computer Vision | Multimodal Fusion**
 
-Developed a multimodal phishing detection application that analyzes **email text, URLs, and images** using specialized machine learning and deep learning models.
+Built an AI-powered phishing detection application that analyzes **email content, URLs, and images** through specialized machine learning and deep learning models.
 
-The system combines predictions from individual modalities through weighted fusion to generate a final phishing classification.
+The system combines complementary model predictions within each modality and integrates available signals through weighted multimodal fusion.
 
 🔗 [Live Demo](https://phishguard-ai-tau-one.vercel.app/)
 
-**Model Architecture:**
+**System Architecture:**
 
-- **Email Classification:** Fine-tuned BERT combined with TF-IDF and Linear SVM for contextual and lexical phishing detection.
-- **URL Classification:** Fine-tuned BERT (`bert-base-uncased`) combined with Logistic Regression using structural URL features.
-- **Image Classification:** CNN ensemble consisting of ResNet50, EfficientNet-B0, and DenseNet121.
-- **Multimodal Fusion:** Weighted combination of email, URL, and image predictions, with weight normalization when modalities are unavailable.
+- **📧 Email Modality — 97.5% reported score**
+  - Fine-tuned **BERT (80%)** + **TF-IDF and SVM (20%)**.
+  - Concatenated email subject and body, followed by text cleaning and lemmatization.
+  - Applied Platt scaling for calibrated prediction probabilities.
+  - The application separately reports **98.76% accuracy** for a six-model fusion evaluation.
 
-**Why these models?**
+- **🔗 URL Modality — 95.1% reported score**
+  - Fine-tuned **BERT (`bert-base-uncased`) (80%)** on raw URL strings.
+  - Combined with **Logistic Regression (20%)** using 11 structural URL features.
+  - Three epochs of BERT fine-tuning on more than 7,500 samples.
 
-- **BERT:** Captures contextual patterns in phishing language and URL representations.
-- **TF-IDF + SVM:** Provides an efficient lexical classification approach that complements transformer-based predictions.
-- **Logistic Regression:** Uses structural URL features to complement contextual URL classification.
-- **CNN Ensemble:** Combines different convolutional architectures to capture visual patterns in phishing-related images.
-- **Weighted Fusion:** Integrates signals across modalities for more comprehensive phishing detection.
+- **🖼️ Image Modality — 89.7% reported score**
+  - **F1-weighted CNN ensemble** combining:
+    - ResNet50 (~34%)
+    - EfficientNet-B0 (~34%)
+    - DenseNet121 (~33%)
+  - Applied soft voting across the three CNN architectures.
+  - The application reports five-epoch training on 1,313 phishing/legitimate screenshots.
 
-**Highlights:**
-- Developed and evaluated multiple ML and deep learning models across three modalities.
-- Integrated predictions through a weighted multimodal inference workflow.
-- Built an interactive React frontend and FastAPI backend.
-- Deployed the frontend on Vercel and backend on Google Cloud Run.
-- Explored federated learning and homomorphic encryption as privacy-preserving ML research directions.
+- **⚡ Multimodal Fusion**
+  - Applied an F1-weighted average across available modalities:
+    - URL: 40%
+    - Image: 35%
+    - Email: 25%
+  - Renormalized weights when one or more modalities were unavailable.
 
-**Tech Stack:** Python, PyTorch, Scikit-learn, Hugging Face Transformers, BERT, ResNet50, EfficientNet-B0, DenseNet121, FastAPI, React, TypeScript, Vercel, Google Cloud Run
+**Why These Models?**
+
+- **BERT:** Captures contextual patterns in email language and raw URL representations.
+- **TF-IDF + SVM:** Adds lightweight lexical classification signals to complement contextual email predictions.
+- **Logistic Regression:** Analyzes structural URL characteristics alongside transformer-based URL predictions.
+- **CNN Ensemble:** Uses three different image architectures to learn complementary visual features.
+- **Weighted Fusion:** Combines predictions across multiple input types while supporting incomplete modality inputs.
+
+**Engineering Highlights:**
+
+- Developed multimodal classification workflows combining traditional machine learning and deep learning.
+- Integrated BERT and classical ML models for email and URL analysis.
+- Used probability calibration and weighted model fusion in the email classification workflow.
+- Combined CNN predictions through F1-weighted soft voting.
+- Developed a FastAPI inference backend and React/TypeScript frontend.
+- Deployed the frontend on **Vercel** and backend on **Google Cloud Run**.
+- Explored federated learning (Flower) and homomorphic encryption as separate research directions.
+
+**Tech Stack:**
+
+Python, PyTorch, torchvision, Scikit-learn, Hugging Face Transformers, BERT, TF-IDF, Linear SVM, Logistic Regression, ResNet50, EfficientNet-B0, DenseNet121, FastAPI, Uvicorn, React 18, Vite, TypeScript, Vercel, Google Cloud Run
+
+> **Evaluation note:** The modality percentages are reported by the application UI and are not labeled as F1 scores. The 98.76% accuracy refers to a separately reported fusion evaluation. Final metrics and model configurations should be checked against the training notebooks and deployed code.
 
 ---
 
