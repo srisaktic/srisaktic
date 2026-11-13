@@ -15,7 +15,7 @@ I'm particularly interested in building AI systems that go beyond model experime
 
 ## 💼 Professional Experience
 
-### 🧠 Machine Learning Engineer Intern (Part-time) | Aionix11
+### 🧠 Machine Learning Engineer Intern | Aionix11
 *August 2025 – May 2026*
 
 Contributed to document intelligence and NLP workflows focused on making unstructured business information accessible through machine learning.
